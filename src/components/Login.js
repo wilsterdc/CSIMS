@@ -1,4 +1,4 @@
-const Header = () => {
+const Login = () => {
   return (
     <div>
         <div>
@@ -22,4 +22,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Login
