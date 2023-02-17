@@ -34,10 +34,10 @@ body {
     margin-top: 5px;
 }
 
-@media (max-width: 414px) {
+/* @media (max-width: 414px) {
   .cover {
     position: relative;
     display: flex;
     flex-direction: column;
   }
-}
+} */
