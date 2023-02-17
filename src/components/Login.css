@@ -12,19 +12,32 @@ body {
 
 .cover {
     position: absolute;
-    width: 300px;
+    width: 245px;
     height: 250px;
     border: 1px solid #0000cd;
     box-shadow: 0 0 8px 2px rgb(0, 0, 139, 0.5);
     border-radius: 1em;
-    padding: 30px;
-    margin: 30px 30px;
+    padding: 10px;
+    margin: 200px 200px;
     position: relative;
     float: right;
-    justify-content: space-around;
-    /* position: relative;
-    box-shadow: 0 0.1883m 1.550em #0000ff;
+    text-align: center;
+    /* justify-content: space-around;
+    display: flex;
+    flex-direction: column; */
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 5px;
+}
+
+@media (max-width: 414px) {
+  .cover {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around; */
   }
+}
