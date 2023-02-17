@@ -3,8 +3,10 @@ import Login from './components/Login'
 function App() {
   
   return (
-    <div className = 'container'>
-      <Login />
+    <div>
+      <div className = 'container'>
+        <Login />  
+      </div>
     </div>
 )}
 

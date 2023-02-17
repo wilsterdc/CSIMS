@@ -1,7 +1,10 @@
+import './Login.css'
+
 const Login = () => {
   return (
     <div>
-        <div>
+        <div className = 'cover'>
+            <h1>Login</h1>
             <form>
                 <div>
                     <label>Username</label>
@@ -13,7 +16,7 @@ const Login = () => {
                     <br />
                     <input type = 'password' placeholder = 'Password'></input>
                 </div>
-                <div>
+                <div className = 'login-btn'>
                     <button>Login</button>
                 </div>
             </form>
