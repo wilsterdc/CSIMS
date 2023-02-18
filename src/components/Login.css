@@ -73,6 +73,7 @@ body {
         margin: 40px auto;
         float: none;
         width: 80%;
+        height: auto;
         position: center; 
         /* display: flex;
         flex-direction: column; */
