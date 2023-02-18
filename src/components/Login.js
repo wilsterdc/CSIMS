@@ -4,20 +4,20 @@ const Login = () => {
   return (
     <div>
         <div className = 'cover'>
-            <h1 className = 'head'>Login</h1>
+            <h2 className = 'head'>CSIMS</h2>
             <form>
                 <div>
-                    <label>Username</label>
+                    <label className = 'label'>Username</label>
                     <br />
                     <input type = 'text' placeholder = 'Username'></input>
                 </div>
                 <div>
-                    <label>Password</label>
+                    <label className = 'label'>Password</label>
                     <br />
                     <input type = 'password' placeholder = 'Password'></input>
                 </div>
-                <div className = 'login-btn'>
-                    <button>Login</button>
+                <div>
+                    <button className = 'login-btn'>Login</button>
                 </div>
             </form>
         </div>

@@ -14,8 +14,7 @@ body {
     position: absolute;
     width: 245px;
     height: 250px;
-    border: 1px solid #0000cd;
-    box-shadow: 0 0 8px 2px rgb(0, 0, 139, 0.5);
+    box-shadow: 0 0 10px 3px rgb(0, 0, 205, 0.5);
     border-radius: 1em;
     padding: 10px;
     margin: 200px 200px;
@@ -27,17 +26,42 @@ body {
     flex-direction: column; */
 }
 
-.head {
-    display: flex;
+/* .head {
     justify-content: space-between;
     text-align: center;
-    margin-top: 5px;
+} */
+
+.label {
+    align-items: left;
 }
 
-/* @media (max-width: 414px) {
-  .cover {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+.login-btn {
+    display: inline-block;
+    color: white;
+    width: 50px;
+    height: 30px;
+    margin: 50px auto;
+    background: #0000cd;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-family: inherit;
+}
+
+.login-btn:active {
+    transform: scale(0.95)
+}
+
+
+@media screen and (max-width: 768px) {
+    .cover {
+        margin: 20px auto;
+        float: none;
+        width: 55%;
+        /* position: center; 
+        display: flex;
+        flex-direction: column; */
+      
+    }
   }
-} */
