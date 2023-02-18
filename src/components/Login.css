@@ -12,41 +12,44 @@ body {
 
 .cover {
     position: absolute;
-    width: 245px;
-    height: 250px;
+    width: 350px;
+    height: 370px;
     box-shadow: 0 0 10px 3px rgb(0, 0, 205, 0.5);
     border-radius: 1em;
     padding: 10px;
-    margin: 200px 200px;
+    margin: 160px 230px;
     position: relative;
     float: right;
     text-align: center;
+    font-size: 28px;
     /* justify-content: space-around;
     display: flex;
     flex-direction: column; */
 }
 
-/* .head {
-    justify-content: space-between;
-    text-align: center;
-} */
+.login-input {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 0.5em;
+}
 
-.label {
-    align-items: left;
+.login-input:focus {
+    border: 3px solid #0000cd;
 }
 
 .login-btn {
     display: inline-block;
     color: white;
-    width: 50px;
-    height: 30px;
-    margin: 50px auto;
+    width: 90px;
+    height: 40px;
+    margin: 30px auto;
     background: #0000cd;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 1em;
     text-align: center;
     font-family: inherit;
+    font-size: 18px;
 }
 
 .login-btn:active {
@@ -54,17 +57,24 @@ body {
 }
 
 .reset {
-    font-size: 10px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#failed {
+    font-size: 14px;
+    color: #ff0000;
+    /* margin-top: 5px; */
 }
 
 
 @media screen and (max-width: 768px) {
     .cover {
-        margin: 20px auto;
+        margin: 40px auto;
         float: none;
-        width: 55%;
-        /* position: center; 
-        display: flex;
+        width: 80%;
+        position: center; 
+        /* display: flex;
         flex-direction: column; */
       
     }
