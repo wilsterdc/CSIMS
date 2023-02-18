@@ -53,6 +53,10 @@ body {
     transform: scale(0.95)
 }
 
+.reset {
+    font-size: 10px;
+}
+
 
 @media screen and (max-width: 768px) {
     .cover {
