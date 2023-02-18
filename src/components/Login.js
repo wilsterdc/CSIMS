@@ -17,7 +17,7 @@ const Login = () => {
                 </div>
                 <div>
                     <p className = 'reset'>Forgot password? <br />Please contact the Office of the Registrar 
-                        through the following contact number: <em>(044) 769 2021</em> or
+                        through the following contact number: <strong><em>(044) 769 2021</em></strong> or
                          through email; <a href = "mailto:inquiries@collegeofmaryimmaculate.edu.ph" target = 'blank'>
                             inquiries@collegeofmaryimmaculate.edu.ph</a>
                     </p>
