@@ -9,52 +9,52 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(username, password);
 
-        // try {
-        //     const response = await fetch('http://localhost:8000/students');
-        //     if (!response.ok) {
-        //         throw new Error(`HTTP error! status: ${response.status}`);
-        //     }
-
-        //     const users = await response.json();
-        //     const user = users.find(
-        //         (u) => u.username === username && u.password === password
-        //     );
-
-        //     if (user) {
-        //         setSuccessful('Login successfully!');
-        //     } else {
-        //         setError('Login failed! Username or Password is incorrect');
-        //     }
-        // } catch (error) {
-        //     console.error('Login error! Username or Password is incorrect', error);
-        //     setError('Login failed! Username or Password is incorrect');
-        // }
-
-        // Best practice I think. Try to dubug later.
         try {
-            const response = await fetch('http://localhost:8000/students', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({username, password}),
-            });
-            const data = await response.json();
-            if (data.error) {
-                setError(data.error);
+            const response = await fetch('http://localhost:8000/students');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const users = await response.json();
+            const user = users.find(
+                (u) => u.username === username && u.password === password
+            );
+
+            if (user) {
+                setSuccessful('Login successfully!');
             } else {
-                setSuccessful('Login successful!');
-                alert('Login success!')
-                // localStorage.setItem('token', data.token);
-                // window.location.href = '/protected-page'
+                setError('Login failed! Username or Password is incorrect');
             }
         } catch (error) {
-            console.error('Login error!', error);
-            setError('An unexpected error occured.');
+            console.error('Login error! Username or Password is incorrect', error);
+            setError('Login failed! Username or Password is incorrect');
         }
+
+        // use for adding accounts
+        // try {
+        //     const response = await fetch('http://localhost:8000/students', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify({username, password}),
+        //     });
+        //     const data = await response.json();
+        //     if (data.error) {
+        //         setError(data.error);
+        //     } else {
+        //         setSuccessful('Login successful!');
+        //         alert('Login success!')
+        //         // localStorage.setItem('token', data.token);
+        //         // window.location.href = '/protected-page'
+        //     }
+        // } catch (error) {
+        //     console.error('Login error!', error);
+        //     setError('An unexpected error occured.');
+        // }
     };
-    
 
   return (
     <div>
@@ -91,7 +91,7 @@ const Login = () => {
                     </p>
                 </div>
                 <div>
-                    <button onSubmit = {handleSubmit} className = 'login-btn'>Login</button>
+                    <button type = 'submit' className = 'login-btn'>Login</button>
                 </div>
             </form>
         </div>
