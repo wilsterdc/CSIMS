@@ -5,14 +5,13 @@ import Home from './components/Home'
 function App() {
   
   return (
-    <div>
-      <div className = 'container'>
+    <div className = 'container'>
+      <div>
         <Login />
       </div>
-      {/* <Routes>
-        <Route exact path = '/' component = {<Login />} />
+      <Routes>
         <Route path = '/home' component = {<Home />} />
-      </Routes> */}
+      </Routes>
     </div>
 )}
 

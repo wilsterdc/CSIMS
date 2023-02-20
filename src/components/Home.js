@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div>\
+    <div>
       <h1>Welcome</h1>
       <p>You have successfully logged in!</p>
     </div>
