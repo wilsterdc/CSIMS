@@ -67,6 +67,11 @@ body {
     /* margin-top: 5px; */
 }
 
+#success {
+    font-size: 14px;
+    color: #00bfff;
+}
+
 
 @media screen and (max-width: 768px) {
     .cover {

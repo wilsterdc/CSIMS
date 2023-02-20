@@ -5,9 +5,31 @@ const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [successful, setSuccessful] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        // axios.get('http;//localhost:8000/students', {
+        //     params: {
+        //         usrname: username,
+        //         password: password
+        //     }
+        // })
+        // .then(response => {
+        //     if (response.data.length > 0) {
+        //         // Login successful
+        //         window.location.href = './home';
+        //     } else {
+        //         // Login failed
+        //         setError('Invalid username or password')
+        //     }
+        // })
+        // .catch(error => {
+        //     console.error('Login error!', error);
+        //     setError('Login failed! Username or Password is incorrect');
+
+        // })
 
         try {
             const response = await fetch('http://localhost:8000/students');
@@ -15,22 +37,26 @@ const Login = () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
-            const users = await await response.json();
+            const users = await response.json();
             const user = users.find(
                 (u) => u.username === username && u.password === password
             );
 
             if (user) {
-                alert('Login successful!');
+                setSuccessful('Login successfully!');
+                alert('Login successfully')
             } else {
-                alert('Invalid username or password');
+                setError('Login failed! Username or Password is incorrect');
+                alert('Login failed!')
             }
         } catch (error) {
             console.error('Login error! Username or Password is incorrect', error);
             setError('Login failed! Username or Password is incorrect');
         }
+
+        // Best practice I think. Try to dubug later.
         // try {
-        //     const response = await fetch('http://localhost:8000/student', {
+        //     const response = await fetch('http://localhost:8000/students', {
         //         method: 'POST',
         //         headers: {
         //             'Content-Type': 'application/json',
@@ -41,7 +67,7 @@ const Login = () => {
         //     if (data.error) {
         //         setError(data.error);
         //     } else {
-        //         // setError('Login successful!');
+        //         setError('Login successful!');
         //         localStorage.setItem('token', data.token);
         //         window.location.href = '/protected-page'
         //     }
@@ -74,7 +100,8 @@ const Login = () => {
                         ></input>
                 </div>
                 <div>
-                    {error && <p id = 'failed'>{error}</p>}
+                    {successful ? (<p id = 'success'>{successful}</p>) : 
+                    error && <p id = 'failed'>{error}</p>}
                 </div>
                 <div>
                     <p className = 'reset'>
