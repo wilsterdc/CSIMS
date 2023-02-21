@@ -21,6 +21,7 @@ body {
     float: right;
     text-align: center;
     font-size: 28px;
+    background-color: #fff;
     /* justify-content: space-around;
     display: flex;
     flex-direction: column; */
@@ -84,6 +85,11 @@ body {
 #success {
     font-size: 14px;
     color: #0000cd;
+}
+
+.container {
+    background-color: #00bfff;
+    height: 695px;
 }
 
 

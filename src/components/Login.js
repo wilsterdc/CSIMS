@@ -64,7 +64,7 @@ const Login = () => {
     };
 
   return (
-    <div>
+    <div className = 'container'>
         <div className = 'cover'>
             <h4>College of Mary Immaculate</h4>
             <form onSubmit = {handleSubmit}>
