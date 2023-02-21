@@ -14,9 +14,6 @@ function Home() {
       <h1>Welcome</h1>
       <p>You have successfully logged in!</p>
       <button onClick = {handleLogout}>Logout</button>
-      {/* {loggedIn && (
-        <button onClick = {handleLogout}>Logout</button>
-      )} */}
       <a href = '/profile'>Profile</a>
     </div>
   )

@@ -11,14 +11,13 @@ body {
 }
 
 .cover {
-    position: absolute;
+    position: relative;
     width: 350px;
     height: 370px;
     box-shadow: 0 0 10px 3px rgb(0, 0, 205, 0.5);
     border-radius: 1em;
     padding: 10px;
     margin: 160px 230px;
-    position: relative;
     float: right;
     text-align: center;
     font-size: 28px;
@@ -28,10 +27,15 @@ body {
 }
 
 .login-input {
+    position: relative;
     font-size: 18px;
     padding: 5px;
     border-radius: 0.5em;
 }
+
+/* .login-input input[type = 'password'] {
+    padding-right: 36px;
+} */
 
 .login-input:focus {
     border: 3px solid #0000cd;
@@ -42,7 +46,7 @@ body {
     color: white;
     width: 90px;
     height: 40px;
-    margin: 30px auto;
+    margin: 10px auto;
     background: #0000cd;
     border: none;
     cursor: pointer;
@@ -54,6 +58,16 @@ body {
 
 .login-btn:active {
     transform: scale(0.95)
+}
+
+.pass-btn {
+    position: absolute;
+    right: 70px;
+    top: 154px;
+    transform: translateX(10%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .reset {
@@ -83,5 +97,14 @@ body {
         /* display: flex;
         flex-direction: column; */
       
+    }
+
+    .login-input {
+        width: 85%;
+    }
+
+    .pass-btn {
+        right: 15%;
+        top: 38%;
     }
   }
