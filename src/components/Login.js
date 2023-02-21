@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Login.css'
 
-const Login = () => {
+const Login = ({ onLogin }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -23,7 +23,8 @@ const Login = () => {
 
             if (user) {
                 setSuccessful('Login successfully!');
-                localStorage.setItem('isLoggedIn', true);
+                onLogin();
+                // localStorage.setItem('isLoggedIn', true);
             } else {
                 setError('Login failed! Username or Password is incorrect');
             }
