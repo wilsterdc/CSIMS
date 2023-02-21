@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import './Login.css'
 
 const Login = () => {
@@ -9,7 +9,6 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(username, password);
 
         try {
             const response = await fetch('http://localhost:8000/students');
@@ -24,12 +23,13 @@ const Login = () => {
 
             if (user) {
                 setSuccessful('Login successfully!');
+                localStorage.setItem('isLoggedIn', true);
             } else {
                 setError('Login failed! Username or Password is incorrect');
             }
         } catch (error) {
-            console.error('Login error! Username or Password is incorrect', error);
-            setError('Login failed! Username or Password is incorrect');
+            console.error('Error fecthing the data!', error);
+            setError('An unexpected error occured while fetching data.');
         }
 
         // use for adding accounts

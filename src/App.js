@@ -3,15 +3,18 @@ import Login from './components/Login'
 import Home from './components/Home'
 
 function App() {
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
   
   return (
     <div className = 'container'>
-      <div>
+      {isLoggedIn ? (
+        <Routes>
+          <Route path = '/home' element = {<Home />} />
+        </Routes>
+      ) : (
         <Login />
-      </div>
-      <Routes>
-        <Route path = '/home' component = {<Home />} />
-      </Routes>
+      )}
     </div>
 )}
 
