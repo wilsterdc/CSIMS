@@ -7,7 +7,9 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+    background: rgb(0,0,205);
+    background: linear-gradient(90deg, rgba(0,0,205,1) 0%, rgba(65,105,225,1) 50%, rgba(0,191,255,1) 100%);
+    font-family: 'Poppins', sans-serif;
 }
 
 .cover {
@@ -17,7 +19,7 @@ body {
     box-shadow: 0 0 10px 3px rgb(0, 0, 205, 0.5);
     border-radius: 1em;
     padding: 10px;
-    margin: 160px 230px;
+    margin: 160px 170px;
     float: right;
     text-align: center;
     font-size: 28px;
@@ -87,13 +89,35 @@ body {
     color: #0000cd;
 }
 
-.container {
-    background-color: #00bfff;
-    height: 695px;
+.img-container {
+    position: absolute;
+    background-color: transparent;
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
 }
 
+.img-container img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
 
-@media screen and (max-width: 768px) {
+/* .triangle-image {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+} */
+  
+/* .blur-image {
+    filter: blur(0px);
+} */
+  
+
+
+@media screen and (max-width: 523px) {
     .cover {
         margin: 40px auto;
         float: none;
@@ -111,6 +135,28 @@ body {
 
     .pass-btn {
         right: 15%;
-        top: 38%;
+        top: 154px;
+    }
+  }
+
+  @media screen and (min-width: 524px) and (max-width: 768px) {
+    .cover {
+        margin: 40px auto;
+        float: none;
+        width: 80%;
+        height: auto;
+        position: center; 
+        /* display: flex;
+        flex-direction: column; */
+      
+    }
+
+    .login-input {
+        width: 85%;
+    }
+
+    .pass-btn {
+        right: 12%;
+        top: 114px;
     }
   }

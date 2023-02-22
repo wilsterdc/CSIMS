@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import './Login.css'
+import cmibuildingSrc from './Images/cmibuilding.jpg'
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -64,7 +65,7 @@ const Login = () => {
     };
 
   return (
-    <div className = 'container'>
+    <div>
         <div className = 'cover'>
             <h4>College of Mary Immaculate</h4>
             <form onSubmit = {handleSubmit}>
@@ -105,6 +106,9 @@ const Login = () => {
                     <button type = 'submit' className = 'login-btn'>Login</button>
                 </div>
             </form>
+        </div>
+        <div className = 'img-container'>
+            <img src = {cmibuildingSrc} alt = 'College of Mary Immaculate' className = 'blur-image'/>
         </div>
     </div>
   )
