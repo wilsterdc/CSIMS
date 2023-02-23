@@ -7,9 +7,11 @@
 }
 
 body {
-    background: rgb(0,0,205);
-    background: linear-gradient(90deg, rgba(0,0,205,1) 0%, rgba(65,105,225,1) 50%, rgba(0,191,255,1) 100%);
+    /* background: rgb(0,0,205);
+    background: linear-gradient(90deg, rgba(0,0,205,1) 0%, rgba(65,105,225,1) 50%, rgba(0,191,255,1) 100%); */
+    background: #ffff;
     font-family: 'Poppins', sans-serif;
+    background-size: cover;
 }
 
 .cover {
@@ -24,6 +26,7 @@ body {
     text-align: center;
     font-size: 28px;
     background-color: #fff;
+    /* filter: blur(5px); */
     /* justify-content: space-around;
     display: flex;
     flex-direction: column; */
@@ -34,6 +37,7 @@ body {
     font-size: 18px;
     padding: 5px;
     border-radius: 0.5em;
+    background-color: transparent;
 }
 
 /* .login-input input[type = 'password'] {
@@ -92,16 +96,17 @@ body {
 .img-container {
     position: absolute;
     background-color: transparent;
-    width: 60%;
+    /* width: 60%; */
+    width: 115vh;
     height: 100%;
     overflow: hidden;
+    clip-path: polygon(0% 0%,70% 0%,90% 30%,60% 100%,0% 100%);
 }
 
 .img-container img {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    width: 90%;
+    height: 125%;
 }
 
 /* .triangle-image {
@@ -118,14 +123,19 @@ body {
 
 
 @media screen and (max-width: 523px) {
+    body{
+        width: 100%;
+        height: 100%;
+    }
+
     .cover {
-        margin: 40px auto;
+        margin: 0 auto;
         float: none;
         width: 80%;
         height: auto;
         position: center; 
-        /* display: flex;
-        flex-direction: column; */
+        display: flex;
+        flex-direction: column;
       
     }
 
@@ -137,9 +147,18 @@ body {
         right: 15%;
         top: 154px;
     }
+
+    .img-container {
+        display: none;
+    }
   }
 
   @media screen and (min-width: 524px) and (max-width: 768px) {
+    body {
+        width: 100%;
+        height: 100%;
+
+    }
     .cover {
         margin: 40px auto;
         float: none;

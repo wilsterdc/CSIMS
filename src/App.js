@@ -1,5 +1,6 @@
 // import {useState} from 'react'
 import {Routes, Route} from 'react-router-dom'
+import Landing from './components/Landing'
 import Login from './components/Login'
 import Home from './components/Home'
 import Profile from './components/Profile'
@@ -9,13 +10,21 @@ function App() {
   
   return (
     <div className = 'container'>
+      {/* <Routes>
+        <Route path = '/' element = {<Landing />} />
+        <Route path = '/login' element = {<Login />} />
+      </Routes> */}
+
       {isLoggedIn ? (
         <Routes>
-          <Route path = '/' element = {<Home />} />
+          <Route path = '/home' element = {<Home />} />
           <Route path = '/profile' element = {<Profile />} />
         </Routes>
       ) : (
-        <Login />
+        <Routes>
+        <Route path = '/' element = {<Landing />} />
+        <Route path = '/login' element = {<Login />} />
+      </Routes>
       )}
     </div>
 )}

@@ -4,7 +4,7 @@ function Profile() {
   return (
     <div>
         <h1>Profile</h1>
-        <a href = '/'>Home</a>
+        <a href = '/home'>Home</a>
     </div>
   )
 }

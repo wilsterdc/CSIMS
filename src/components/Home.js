@@ -1,11 +1,10 @@
-import { useState } from 'react'
 
 
 function Home() {
 
   const handleLogout = () => {
     localStorage.clear();
-    window.location.reload();
+    window.location.href = '/login'
   }
   
 

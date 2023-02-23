@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
-import './Login.css'
+import './Style.css'
 import cmibuildingSrc from './Images/cmibuilding.jpg'
 
 const Login = () => {
@@ -32,6 +32,7 @@ const Login = () => {
                 setSuccessful('Login successfully!');
                 localStorage.setItem('isLoggedIn', true);
                 window.location.reload();
+                window.location.href = '/home'
             } else {
                 setError('Login failed! Username or Password is incorrect');
             }
@@ -66,6 +67,9 @@ const Login = () => {
 
   return (
     <div>
+        <div className = 'img-container'>
+            <img src = {cmibuildingSrc} alt = 'College of Mary Immaculate'/>
+        </div>
         <div className = 'cover'>
             <h4>College of Mary Immaculate</h4>
             <form onSubmit = {handleSubmit}>
@@ -106,9 +110,6 @@ const Login = () => {
                     <button type = 'submit' className = 'login-btn'>Login</button>
                 </div>
             </form>
-        </div>
-        <div className = 'img-container'>
-            <img src = {cmibuildingSrc} alt = 'College of Mary Immaculate' className = 'blur-image'/>
         </div>
     </div>
   )
