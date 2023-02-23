@@ -1,5 +1,6 @@
 // import {useState} from 'react'
 import {Routes, Route} from 'react-router-dom'
+import Nav from './components/Nav'
 import Landing from './components/Landing'
 import Login from './components/Login'
 import Home from './components/Home'
@@ -10,11 +11,7 @@ function App() {
   
   return (
     <div className = 'container'>
-      {/* <Routes>
-        <Route path = '/' element = {<Landing />} />
-        <Route path = '/login' element = {<Login />} />
-      </Routes> */}
-
+      <Nav />
       {isLoggedIn ? (
         <Routes>
           <Route path = '/home' element = {<Home />} />

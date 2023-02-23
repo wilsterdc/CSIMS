@@ -8,23 +8,19 @@
 }
 
 body {
-    /* background: rgb(0,0,205);
-    background: linear-gradient(90deg, rgba(0,0,205,1) 0%, rgba(65,105,225,1) 50%, rgba(0,191,255,1) 100%); */
-    /* background: #ffff; */
+    background: #00bfff;
     font-family: 'Poppins', sans-serif;
     background-size: cover;
-    /* background-color: #00bfff; */
 
-    /* background: linear-gradient(184deg, #0000cd, #fff000); */
-    background: linear-gradient(184deg, #0000cd, #00bfff, #fff000);
+    /* background: linear-gradient(184deg, #0000cd, #00bfff, #fff000);
     background-size: 400% 400%;
 
     -webkit-animation: animate 15s ease infinite;
     -moz-animation: animate 15s ease infinite;
-    animation: animate 15s ease infinite;
+    animation: animate 15s ease infinite; */
 }
 
-@-webkit-keyframes animate {
+/* @-webkit-keyframes animate {
     0%{background-position:99% 0%}
     50%{background-position:2% 100%}
     100%{background-position:99% 0%}
@@ -38,7 +34,7 @@ body {
     0%{background-position:99% 0%}
     50%{background-position:2% 100%}
     100%{background-position:99% 0%}
-}
+} */
 
 .interchng-text {
     position: relative;
