@@ -1,30 +1,47 @@
 import {useState, useEffect} from 'react'
 // import { Link } from 'react-router-dom'
+import dedication from './dedication.json'
 import cmibuildingSrc from './Images/cmibuilding.jpg'
+import cmiLogo from './Images/cmi.png'
 
 function Landing() {
-    const [textIndex, setTextIndex] = useState(0);
-    const texts = ['Hello', 'Bonjour', 'Hola', 'こんにちは', '안녕하세요', 'Ciao'];
+    const [texts, setTexts] = useState([]);
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            setTextIndex((textIndex + 1) % texts.length);
+        setTexts(dedication.texts)
+    }, []);
+
+    const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTextIndex((prevIndex) =>
+                prevIndex === texts.length - 1 ? 0 : prevIndex + 1
+            );
         }, 5000);
 
-        return () => clearInterval(intervalId);
-    }, [textIndex]);
+        return () => clearInterval(interval);
+    });
 
   return (
     <div>
         {/* <Link to = '/login' target = '_blank'>
             <button>Login</button>
         </Link> */}
-        {/* <a href = '/login' target = ' blank'>Login</a>
-        <div className = 'img-container'>
-            <img src = {cmibuildingSrc} alt = 'College of Mary Immaculate'/>
-        </div> */}
-
-        <p>{texts[textIndex]} <br /> How are you?</p>
+        {/* <a href = '/login' target = ' blank'>Login</a> */}
+        <div className = 'bg-blue'>
+            <div className = 'bg-light'>
+                <div className = 'img-container'>
+                    <img src = {cmibuildingSrc} alt = 'College of Mary Immaculate'/>
+                </div>
+            </div>
+        </div>
+        
+        <div className = 'interchng-text'>
+            <img src = {cmiLogo} alt = "CMI Logo" />
+            <p>{texts[currentTextIndex]?.text}</p>
+        </div>
+        
     </div>
   )
 }

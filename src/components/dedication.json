@@ -1,0 +1,29 @@
+{
+    "texts" : [
+        {
+            "id": 1,
+            "text" : "Providing qualified and well-trained Faculty members, using a well-rounded curriculum on academic subjects, technical courses, and job readiness programs."
+        },
+        {
+            "id": 2,
+            "text" : "Providing continuing education and training to its Faculty and Staff."
+        },
+        {
+            "id": 3,
+            "text" : "Providing adequate facilities, tools, and equipment for the students' exposure and practical training in their respective courses."
+        },
+        {
+            "id": 4,
+            "text" : "Inculcating discipline and a high sense of responsibility among students."
+        },
+        {
+            "id": 5,
+            "text" : "Actively soliciting the participation of selected industries in providing apprenticeship training to students with practicum requirements."
+        },
+        {
+            "id": 6,
+            "text" : "Preparing students for their entry into the world of work and entrepreneurship."
+        }
+
+    ]
+}

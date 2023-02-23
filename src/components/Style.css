@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -9,9 +10,62 @@
 body {
     /* background: rgb(0,0,205);
     background: linear-gradient(90deg, rgba(0,0,205,1) 0%, rgba(65,105,225,1) 50%, rgba(0,191,255,1) 100%); */
-    background: #ffff;
+    /* background: #ffff; */
     font-family: 'Poppins', sans-serif;
     background-size: cover;
+    /* background-color: #00bfff; */
+
+    /* background: linear-gradient(184deg, #0000cd, #fff000); */
+    background: linear-gradient(184deg, #0000cd, #00bfff, #fff000);
+    background-size: 400% 400%;
+
+    -webkit-animation: animate 15s ease infinite;
+    -moz-animation: animate 15s ease infinite;
+    animation: animate 15s ease infinite;
+}
+
+@-webkit-keyframes animate {
+    0%{background-position:99% 0%}
+    50%{background-position:2% 100%}
+    100%{background-position:99% 0%}
+}
+@-moz-keyframes animate {
+    0%{background-position:99% 0%}
+    50%{background-position:2% 100%}
+    100%{background-position:99% 0%}
+}
+@keyframes animate {
+    0%{background-position:99% 0%}
+    50%{background-position:2% 100%}
+    100%{background-position:99% 0%}
+}
+
+.interchng-text {
+    position: relative;
+    float: right;
+    margin: 35px 125px;
+    padding: 20px;
+    width: 400px;
+    height: 620px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.interchng-text p{
+    position: relative;
+    font-family: 'Playfair Display SC';
+    margin: 210px 0;
+    font-weight: 700;
+    font-size: 30px;
+    color: #1a1818;
+}
+
+.interchng-text img {
+    position: absolute;
+    background-color: transparent;
+    margin: -25px -120px;
+    width: 250px;
+    height: 250px;
 }
 
 .cover {
@@ -26,6 +80,7 @@ body {
     text-align: center;
     font-size: 28px;
     background-color: #fff;
+    color: #1a1818;
     /* filter: blur(5px); */
     /* justify-content: space-around;
     display: flex;
@@ -96,11 +151,30 @@ body {
 .img-container {
     position: absolute;
     background-color: transparent;
-    /* width: 60%; */
     width: 115vh;
     height: 100%;
     overflow: hidden;
     clip-path: polygon(0% 0%,70% 0%,90% 30%,60% 100%,0% 100%);
+}
+
+.bg-blue {
+    position: absolute;
+    background-color: #fff000;
+    /* width: 60%; */
+    width: 123vh;
+    height: 100%;
+    overflow: hidden;
+    clip-path: polygon(0% 0%,71% 0%,90% 30%,62% 100%,0% 100%);
+}
+
+.bg-light {
+    position: absolute;
+    background-color: #0000cd;
+    /* width: 60%; */
+    width: 123vh;
+    height: 100%;
+    overflow: hidden;
+    clip-path: polygon(0% 0%,65% 0%,90% 40%,62% 100%,0% 100%);
 }
 
 .img-container img {
