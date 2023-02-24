@@ -17,7 +17,7 @@ function Nav() {
             <div className = 'menu-icon' onClick = {handleClick}>
                 {click ? <FaTimes /> : <FaBars />}
             </div>
-            <ul className = {click ? 'nav-menu active' : 'nav-menu'}>
+            <ul className = {click ? 'nav-menu-active' : 'nav-menu'}>
                 <li className = 'nav-item'>
                     <Link to = '/' className = 'nav-links' onClick = {closeMenu}>
                         Home
