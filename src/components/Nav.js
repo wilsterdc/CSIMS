@@ -1,5 +1,10 @@
 import {useState} from 'react'
-import {FaBars, FaTimes} from 'react-icons/fa'
+import {FaTimes, FaBars} from 'react-icons/fa'
+import {BiHome} from 'react-icons/bi'
+import {SlGraduation} from 'react-icons/sl'
+import {HiOutlineDocumentDuplicate} from 'react-icons/hi2'
+import {MdOutlineContactPhone} from 'react-icons/md'
+import {AiOutlineQuestionCircle} from 'react-icons/ai'
 import {Link} from 'react-router-dom'
 import './Nav.css'
 
@@ -13,34 +18,33 @@ function Nav() {
   return (
     <div>
         <div className = 'nav-container'>
-            {/* <nav className = 'nav-logo' onClick = {closeMenu} /> */}
             <div className = 'menu-icon' onClick = {handleClick}>
                 {click ? <FaTimes /> : <FaBars />}
             </div>
-            <ul className = {click ? 'nav-menu-active' : 'nav-menu'}>
+            <ul className = {click ? 'nav-active' : 'nav-menu'}>
                 <li className = 'nav-item'>
                     <Link to = '/' className = 'nav-links' onClick = {closeMenu}>
-                        Home
+                        <BiHome className/> Home
                     </Link>
                 </li>
                 <li className = 'nav-item'>
                     <Link to = '/courses' className = 'nav-links' onClick = {closeMenu}>
-                        Courses
+                        <SlGraduation /> Courses
                     </Link>
                 </li>
                 <li className = 'nav-item'>
                     <Link to = '/enrollment' className = 'nav-links' onClick = {closeMenu}>
-                        Enrollment
+                        <HiOutlineDocumentDuplicate /> Enrollment
                     </Link>
                 </li>
                 <li className = 'nav-item'>
                     <Link to = '/about' className = 'nav-links' onClick = {closeMenu}>
-                        About
+                        <AiOutlineQuestionCircle /> About
                     </Link>
                 </li>
                 <li className = 'nav-item'>
                     <Link to = '/contact' className = 'nav-links' onClick = {closeMenu}>
-                        Contact us
+                        <MdOutlineContactPhone /> Contact us
                     </Link>
                 </li>
             </ul>
