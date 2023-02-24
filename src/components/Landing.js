@@ -29,8 +29,8 @@ function Landing() {
             <button>Login</button>
         </Link> */}
         {/* <a href = '/login' target = ' blank'>Login</a> */}
-        <div className = 'bg-blue'>
-            <div className = 'bg-light'>
+        <div className = 'bg-light'>
+            <div className = 'bg-dark'>
                 <div className = 'img-container'>
                     <img src = {cmibuildingSrc} alt = 'College of Mary Immaculate'/>
                 </div>

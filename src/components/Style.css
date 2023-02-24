@@ -12,6 +12,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-size: cover;
 
+
     /* background: linear-gradient(184deg, #0000cd, #00bfff, #fff000);
     background-size: 400% 400%;
 
@@ -37,11 +38,14 @@ body {
 } */
 
 .interchng-text {
-    position: relative;
-    float: right;
-    margin: 35px 125px;
+    position: absolute;
+    background-color: #fff;
+    color: #1a1818;
+    border-radius: 50px;
+    margin: 17vh 132vh;
     padding: 20px;
-    width: 400px;
+    min-width: 440px;
+    max-width: 550px;
     height: 620px;
     text-align: center;
     overflow: hidden;
@@ -153,7 +157,7 @@ body {
     clip-path: polygon(0% 0%,70% 0%,90% 30%,60% 100%,0% 100%);
 }
 
-.bg-blue {
+.bg-light {
     position: absolute;
     background-color: #fff000;
     /* width: 60%; */
@@ -163,21 +167,20 @@ body {
     clip-path: polygon(0% 0%,71% 0%,90% 30%,62% 100%,0% 100%);
 }
 
-.bg-light {
+.bg-dark {
     position: absolute;
     background-color: #0000cd;
-    /* width: 60%; */
     width: 123vh;
     height: 100%;
     overflow: hidden;
-    clip-path: polygon(0% 0%,65% 0%,90% 40%,62% 100%,0% 100%);
+    clip-path: polygon(0% 0%,65% 0%,90% 40%,62% 120%,0% 120%);
 }
 
 .img-container img {
     position: absolute;
     width: 90%;
     height: 125%;
-}
+}    
 
 /* .triangle-image {
     position: absolute;
@@ -219,7 +222,15 @@ body {
     }
 
     .img-container {
-        display: none;
+        min-width: 100vh;
+    }
+
+    .interchng-text {
+        margin: 125vh 30vh;
+        /* min-width: 440px;
+        max-width: 550px;
+        height: 620px; */
+        text-align: center;
     }
   }
 
