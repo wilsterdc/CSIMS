@@ -2,7 +2,7 @@
     background-color: #0000cd;
     padding-left: 20px;
     height: 45px;
-    width: auto;
+    width: 100%;
 }
 
 .nav-logo {
@@ -66,21 +66,5 @@
 }
 
 @media screen  and (max-width: 523px) {
-    .nav-menu {
-        width: 70%;
-        max-width: 400px;
-        left: -100%;
-      }
     
-      .nav-active {
-        width: 70%;
-        max-width: 500px;
-        left: 0;
-      }
-    
-      .nav-item {
-        width: auto;
-        padding: 0;
-        margin-right: 20px;
-      }
 }

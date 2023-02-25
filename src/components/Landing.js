@@ -29,6 +29,7 @@ function Landing() {
             <button>Login</button>
         </Link> */}
         {/* <a href = '/login' target = ' blank'>Login</a> */}
+        
         <div className = 'bg-light'>
             <div className = 'bg-dark'>
                 <div className = 'img-container'>
@@ -36,11 +37,11 @@ function Landing() {
                 </div>
             </div>
         </div>
-        
         <div className = 'interchng-text'>
             <img src = {cmiLogo} alt = "CMI Logo" />
             <p>{texts[currentTextIndex]?.text}</p>
         </div>
+        
         
     </div>
   )
