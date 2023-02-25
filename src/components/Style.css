@@ -49,19 +49,13 @@ body {
     height: auto;
 }
 
-@media screen and (min-width: 524px) and (max-width: 747px) {
+@media screen and (max-width: 747px) {
     .interchng-text {
         position: absolute;
-        margin: 115vh 15vh;
+        margin: 115vh 17vh;
     }
 
 }
-
-/* @media screen and (max-width: 1037px) {
-    .interchng-text {
-        margin: 700px 250px;
-    }
-} */
 
 .img-container {
     position: relative;
@@ -99,6 +93,23 @@ body {
     object-fit: cover;
     transition: all 0.5s ease;
 }  
+
+@media screen and (max-width: 1178px) {
+    .img-container {
+        width: 100vh;
+        transition: all 0.5s ease;
+    }
+   
+}
+
+@media screen and (max-width: 1302px) {
+    .interchng-text {
+        min-width: 200px;
+        max-width: 30%;
+        margin: 60px 5%;
+        transition: all 0.5s eases;
+    }
+} 
 
 /* .img-container {
     position: relative;
