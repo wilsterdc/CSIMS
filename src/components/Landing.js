@@ -37,10 +37,10 @@ function Landing() {
                 </div>
             </div>
         </div>
-        <div className = 'interchng-text'>
+        {/* <div className = 'interchng-text'>
             <img src = {cmiLogo} alt = "CMI Logo" />
             <p>{texts[currentTextIndex]?.text}</p>
-        </div>
+        </div> */}
         
         
     </div>

@@ -18,11 +18,9 @@ body {
     float: right;
     color: #1a1818;
     border-radius: 50px;
-    margin: 60px 2%;
-    padding: 20px;
-    width: 540px;
-    /* min-width: 200px;
-    max-width: 40%; */
+    margin: 10vh 1.5vw;
+    padding: 0 0.5em;
+    width: min(40vw, 540px);
     height: 520px;
     text-align: center;
     overflow: hidden;
@@ -32,9 +30,7 @@ body {
 .interchng-text p {
     position: relative;
     font-family: 'Playfair Display SC';
-    /* margin: 210px 0; */
-    /* margin: 200px 2%; */
-    margin: 40% 2%;
+    margin: 200px 2%;
     font-weight: 700;
     font-size: 30px;
     color: #1a1818;
@@ -45,22 +41,13 @@ body {
     background-color: transparent;
     margin: -25px -120px;
     width: 250px;
-    /* height: 250px; */
     height: auto;
-}
-
-@media screen and (max-width: 747px) {
-    .interchng-text {
-        position: absolute;
-        margin: 115vh 17vh;
-    }
-
 }
 
 .img-container {
     position: relative;
-    width: 115vh;
-    height: 100%;
+    width: 58.5vw;
+    height: 93.5vh;
     overflow: hidden;
     clip-path: polygon(0% 0%,70% 0%,90% 30%,60% 100%,0% 100%);
     transition: all 0.5s ease;
@@ -69,8 +56,8 @@ body {
 .bg-light {
     position: absolute;
     background-color: #fff000;
-    width: 123vh;
-    height: 650px;
+    width: 63.5vw;
+    height: 93.5vh;
     overflow: hidden;
     clip-path: polygon(0% 0%,71% 0%,90% 30%,62% 100%,0% 100%);
     transition: all 0.5s ease;
@@ -79,110 +66,48 @@ body {
 .bg-dark {
     position: absolute;
     background-color: #0000cd;
-    width: 123vh;
-    height: 100%;
+    width: 62.5vw;
+    height: 93.5vh;
     overflow: hidden;
     clip-path: polygon(0% 0%,65% 0%,90% 40%,62% 120%,0% 120%);
     transition: all 0.5s ease;
 }
 
 .img-container img {
+    left: -0.4em;
     position: absolute;
-    width: 90%;
-    height: 125%;
+    width: 53vw;
+    height: 120vh;
     object-fit: cover;
     transition: all 0.5s ease;
 }  
 
-@media screen and (max-width: 1178px) {
+@media screen and (max-width: 1250px) {
     .img-container {
-        width: 100vh;
+        width: 94%;
+        height: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .bg-light {
+        width: 100%;
+        height: 65%;
+        transition: all 0.5s ease;
+    }
+
+    .bg-dark {
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .img-container img {
+        width: 92%;
+        height: 120%;
         transition: all 0.5s ease;
     }
    
 }
-
-@media screen and (max-width: 1302px) {
-    .interchng-text {
-        min-width: 200px;
-        max-width: 30%;
-        margin: 60px 5%;
-        transition: all 0.5s eases;
-    }
-} 
-
-/* .img-container {
-    position: relative;
-    width: 93%;
-    height: 100%;
-    overflow: hidden;
-    clip-path: polygon(0% 0%,70% 0%,90% 30%,60% 100%,0% 100%);
-    transition: all 0.5s ease;
-}
-
-.bg-light {
-    position: absolute;
-    background-color: #fff000;
-    width: 65%;
-    height: 100%;
-    overflow: hidden;
-    clip-path: polygon(0% 0%,71% 0%,90% 30%,62% 100%,0% 100%);
-    transition: all 0.5s ease;
-}
-
-.bg-dark {
-    position: absolute;
-    background-color: #0000cd;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    clip-path: polygon(0% 0%,65% 0%,90% 40%,62% 120%,0% 120%);
-    transition: all 0.5s ease;
-}
-
-.img-container img {
-    position: absolute;
-    width: 90%;
-    height: 120%;
-    object-fit: cover;
-    transition: all 0.5s ease;
-}
-
-.interchng-text {
-    position: relative;
-    float: right;
-    color: #1a1818;
-    border-radius: 50px;
-    margin: 50px 1.5%;
-    padding: 10px;
-    min-width: 200px;
-    max-width: 40%;
-    height: 520px;
-    text-align: center;
-    overflow: hidden;
-    background-color: white;
-    transition: all 0.5s ease;
-}
-
-.interchng-text p {
-    position: relative;
-    font-family: 'Playfair Display SC';
-    margin: 200px 2%;
-    font-weight: 700;
-    font-size: 30px;
-    color: #1a1818;
-    transition: all 0.5s ease;
-}
-
-.interchng-text img {
-    position: absolute;
-    background-color: transparent;
-    margin-left: ;
-    margin: -25px -120px;
-    width: 45%;
-    height: auto;
-    transition: all 0.5s ease;
-} */
 
 /*******************************************************************************************/
 
@@ -285,10 +210,6 @@ body {
         top: 154px;
     }
 
-    /* .img {
-        min-width: 100vh;
-    } */
-
   }
 
   @media screen and (min-width: 524px) and (max-width: 747px) { /*768*/
@@ -317,29 +238,4 @@ body {
         top: 114px;
     }
 
-    /* .img-container {
-        width: 100;
-    }
-
-    .bg-light {
-        width: 100%;
-        height: 50%;
-    }
-    
-    .bg-dark {
-        width: 100%;
-    }     */
-
   }
-
-  /* @media (max-width: 768px) {
-    .interchng-text {
-        margin: 500px 10%;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .interchng-text {
-        margin: 400px 15%;
-    }
-  } */
