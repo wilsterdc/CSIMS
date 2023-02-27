@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #00bfff;
+    /* background: #00bfff; */
     font-family: 'Poppins', sans-serif;
     background-size: cover;
 }
@@ -17,30 +17,29 @@ body {
     position: relative;
     float: right;
     color: #1a1818;
-    border-radius: 50px;
-    margin: 10vh 1.5vw;
+    margin: 4em 1.5vw;
     padding: 0 0.5em;
-    width: min(40vw, 540px);
+    width: 40vw;
     height: 520px;
     text-align: center;
-    overflow: hidden;
-    background-color: white;
 }
 
 .interchng-text p {
     position: relative;
     font-family: 'Playfair Display SC';
-    margin: 200px 2%;
+    margin: 19vw 2%;
     font-weight: 700;
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 2vw;
     color: #1a1818;
 }
 
 .interchng-text img {
     position: absolute;
     background-color: transparent;
-    margin: -25px -120px;
-    width: 250px;
+    /* margin: -25px -120px; */
+    margin: 0.5em -10vw;
+    width: 20vw;
     height: auto;
 }
 
@@ -50,27 +49,27 @@ body {
     height: 93.5vh;
     overflow: hidden;
     clip-path: polygon(0% 0%,70% 0%,90% 30%,60% 100%,0% 100%);
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .bg-light {
     position: absolute;
     background-color: #fff000;
     width: 63.5vw;
-    height: 93.5vh;
+    height: 100.5vh;
     overflow: hidden;
-    clip-path: polygon(0% 0%,71% 0%,90% 30%,62% 100%,0% 100%);
-    transition: all 0.5s ease;
+    clip-path: polygon(0% 0%,71% 0%,90% 30%,60% 100%,0% 100%);
+    /* transition: all 0.5s ease; */
 }
 
 .bg-dark {
     position: absolute;
     background-color: #0000cd;
     width: 62.5vw;
-    height: 93.5vh;
+    height: 100.5vh;
     overflow: hidden;
-    clip-path: polygon(0% 0%,65% 0%,90% 40%,62% 120%,0% 120%);
-    transition: all 0.5s ease;
+    clip-path: polygon(0% 0%,65% 0%,90% 40%,60% 120%,0% 120%);
+    /* transition: all 0.5s ease; */
 }
 
 .img-container img {
@@ -79,32 +78,50 @@ body {
     width: 53vw;
     height: 120vh;
     object-fit: cover;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }  
 
 @media screen and (max-width: 1250px) {
     .img-container {
         width: 94%;
-        height: 100%;
-        transition: all 0.5s ease;
+        height: 95%;
+        /* transition: all 0.5s ease; */
     }
 
     .bg-light {
         width: 100%;
         height: 65%;
-        transition: all 0.5s ease;
+        /* transition: all 0.5s ease; */
     }
 
     .bg-dark {
         width: 100%;
         height: 100%;
-        transition: all 0.5s ease;
+        /* transition: all 0.5s ease; */
     }
 
     .img-container img {
         width: 92%;
         height: 120%;
-        transition: all 0.5s ease;
+        /* transition: all 0.5s ease; */
+    }
+
+    .interchng-text {
+        position: absolute;
+        top: 62vh;
+        margin-left: 2vw;
+        width: 96vw;
+    }
+
+    .interchng-text img {
+        width: 40vw;
+        min-width: 100px;
+        margin: 0 -18vw;
+    }
+
+    .interchng-text p {
+        top: 16vw;
+        font-size: 6vw;
     }
    
 }
