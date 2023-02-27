@@ -26,9 +26,9 @@ function Landing() {
   return (
     <div>
         {/* <Link to = '/login' target = '_blank'>
-            <button>Login</button>
+            <button className = 'login-port'>Login</button>
         </Link> */}
-        {/* <a href = '/login' target = ' blank'>Login</a> */}
+        <a className = 'login-port' href = '/login' target = ' blank'>Login</a> 
         
         <div className = 'bg-light'>
             <div className = 'bg-dark'>

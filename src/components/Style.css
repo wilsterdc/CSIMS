@@ -37,7 +37,6 @@ body {
 .interchng-text img {
     position: absolute;
     background-color: transparent;
-    /* margin: -25px -120px; */
     margin: 0.5em -10vw;
     width: 20vw;
     height: auto;
@@ -81,7 +80,27 @@ body {
     /* transition: all 0.5s ease; */
 }  
 
+.login-port {
+    position: absolute;
+    margin: -6.5vh 92vw;
+    width: 5vw;
+    height: 5vh;
+    width: 6vw;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Poppins, sans-serif';
+    font-size: 2vw;
+    text-align: center;
+    border: 2px solid black;
+}
+
 @media screen and (max-width: 1250px) {
+    .login-port {
+        width: 10vw;
+        height: 7vh;
+        min-height: 4vh;
+    }
+
     .img-container {
         width: 94%;
         height: 95%;
@@ -116,7 +135,7 @@ body {
     .interchng-text img {
         width: 40vw;
         min-width: 100px;
-        margin: 0 -18vw;
+        margin: 0 -19vw;
     }
 
     .interchng-text p {

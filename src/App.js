@@ -12,18 +12,21 @@ function App() {
   
   return (
     <div className = 'container'>
-      <Nav />
       {isLoggedIn ? (
         <Routes>
           <Route path = '/home' element = {<Home />} />
           <Route path = '/profile' element = {<Profile />} />
         </Routes>
       ) : (
-        <Routes>
-        <Route path = '/' element = {<Landing />} />
-        <Route path = '/login' element = {<Login />} />
-        <Route path = '/enrollment' element = {<Enrollment />} />
-      </Routes>
+        <>
+        <Nav />
+          <Routes>
+          <Route path = '/' element = {<Landing />} />
+          <Route path = '/login' element = {<Login />} />
+          <Route path = '/enrollment' element = {<Enrollment />} />
+        </Routes>
+        </>
+        
       )}
     </div>
 )}
