@@ -98,11 +98,12 @@ body {
     padding: 0 1em;
     /* width: 96.5vw; */
     width: 100%;
-    border: 2px solid #0000cd;
+    border: 3px solid #0000cd;
 }
 
 .aims-container p {
     font-size: 1.5vw;
+    color: #1a1818;
 }
 
 .students-container {
@@ -114,14 +115,14 @@ body {
     border: 3px solid #0000cd;
 }
 
-@media screen and (max-width: 598px) {
+/* @media screen and (max-width: 598px) {
     .aims-container {
         top: 115vh;
         width: 100%;
     }
-}
+} */
 
-@media screen and (max-width: 1250px) and (max-width: 598px)  {
+@media screen and (max-width: 425px)   {
     .aims-container {
         /* top: 2050px; */
         /* top: 165vh; */
