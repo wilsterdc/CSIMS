@@ -28,7 +28,9 @@ function Landing() {
         {/* <Link to = '/login' target = '_blank'>
             <button className = 'login-port'>Login</button>
         </Link> */}
-        <a className = 'login-port' href = '/login' target = ' blank'>Login</a> 
+        <a className = 'login-port' href = '/login' target = ' blank'>
+            CSIMS
+        </a> 
         
         <div className = 'bg-light'>
             <div className = 'bg-dark'>
@@ -40,6 +42,32 @@ function Landing() {
         <div className = 'interchng-text'>
             <img src = {cmiLogo} alt = "CMI Logo" />
             <p>{texts[currentTextIndex]?.text}</p>
+        </div>
+        <div className = 'aims-container'>
+            <p>
+                The COLLEGE OF MARY IMMACULATE aims to provide Senior High School and Tertiary Education Programs,
+                as well as Technical and Vocational Courses, with an integration of Values Formation and a strong Job Readiness Program. 
+                Throughout their stay at the College of Mary Immaculate, the students learn all the necessary theories, 
+                knowledge and skills necessary for success in their chosen career. Moreover, 
+                the students are imbued with the necessary values that will empower them and prepare them for the world of work, 
+                making them both locally and globally competitive. The students are trained and are expected to:
+            </p>
+            <ul className = 'students-container'>
+                <li className = 'item-students'>
+                    participate in the school's curricular program;
+                </li>
+                <li>
+                    contribute and participate in their family affairs by assuming responsible 
+                    roles in their various community activities where they are expected to help;
+                </li>
+                <li>
+                    participate in their baranggay and Parish projects;
+                </li>
+                <li>
+                    apply the knowledge and skills gained from school to improve their family income 
+                    and eventually contribute to the larger community and national development.
+                </li>
+            </ul>
         </div>
         
         
