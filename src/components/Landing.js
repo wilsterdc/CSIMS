@@ -69,8 +69,6 @@ function Landing() {
                 </li>
             </ul>
         </div>
-        
-        
     </div>
   )
 }

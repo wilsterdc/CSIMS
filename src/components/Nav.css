@@ -1,6 +1,6 @@
 .nav-container {
     background-color: #0000cd;
-    padding-left: 20px;
+    padding-left: 3px;
     height: 10vw;
     max-height: 7vh;
     width: 100%;
@@ -13,7 +13,7 @@
 .menu-icon {
     width: 5.5vh;
     height: 6vh;
-    font-size: min(8.5vw);
+    font-size: 3vw;
     color: #fff;
     cursor: pointer;
 }
@@ -64,16 +64,8 @@
     transition: all 0.5s ease;
 }
 
-@media screen  and (min-width: 820px) {
-    .menu-icon {
-        font-size: 6vh;
-    }
-
-}
-
-@media screen  and (max-width: 820px) {
+@media screen and (max-width: 820px) {
     .nav-container {
-        /* width: 100vw; */
         width: 100%;
     }
 
@@ -90,8 +82,25 @@
     }
 
     .nav-active {
+        top: 5.5vh;
+        width: 106vw;
+        text-align: center;
+    }
+
+    .menu-icon {
+        font-size: 4vh;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .nav-menu {
+        top: 4vh;
+    }
+
+    .nav-active {
         top: 4.5vh;
         width: 106vw;
         text-align: center;
     }
+
 }

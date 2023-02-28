@@ -90,14 +90,14 @@ body {
 }
 
 .aims-container {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
-    top: 35vh;
-    margin: 1em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    width: 96.5vw;
+    top: 115vh;
+    /* margin: 0 1em; */
+    padding: 0 1em;
+    /* width: 96.5vw; */
+    width: 100%;
     border: 2px solid #0000cd;
 }
 
@@ -121,10 +121,11 @@ body {
     }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1250px) and (max-width: 598px)  {
     .aims-container {
-        display: flex;
-        top: 90rem;
+        /* top: 2050px; */
+        /* top: 165vh; */
+        margin: 50vh 0;
         width: 100%;
     }
 
