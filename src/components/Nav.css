@@ -78,7 +78,23 @@
     }
 
     .nav-menu {
-        top: 4vh;
+        top: 6vh;
+    }
+
+    .nav-active {
+        top: 6.5vh;
+        width: 106vw;
+        text-align: center;
+    }
+
+    .menu-icon {
+        font-size: 6vh;
+    }
+}
+
+@media screen and (max-width: 425px) and (min-width: 321px) {
+    .nav-menu {
+        top: 5vh;
     }
 
     .nav-active {
@@ -86,13 +102,16 @@
         width: 106vw;
         text-align: center;
     }
-
     .menu-icon {
-        font-size: 4vh;
+        font-size: 8vw;
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 320px) and (min-width: 200px) {
+    .menu-icon {
+        font-size: 8vw;
+    }
+
     .nav-menu {
         top: 4vh;
     }

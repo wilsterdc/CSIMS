@@ -17,7 +17,7 @@ body {
     position: relative;
     float: right;
     color: #1a1818;
-    margin: 0 0.8vw;
+    margin: 3vh 0.8vw;
     padding: 0 0.5em;
     width: 40vw;
     height: 520px;
@@ -53,6 +53,7 @@ body {
 
 .bg-light {
     position: absolute;
+    top: 0;
     background-color: #fff000;
     width: 63.5vw;
     height: 100.5vh;
@@ -81,12 +82,22 @@ body {
 }  
 
 .login-port {
-    position: absolute;
-    margin: -3.5vw 89vw;
+    position: relative;
+    display: flex;
+    margin: 0.8vw 92%;
     text-decoration: none;
-    color: #fff;
-    font-family: 'Poppins, sans-serif';
-    font-size: 3vw;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: #0000cd;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 3.1vh;
+    width: 11.3vh;
+    height: 4.9vh;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #0000cd;
+    background: #fff000;
 }
 
 .aims-container {
@@ -122,10 +133,13 @@ body {
     }
 } */
 
-@media screen and (max-width: 425px)   {
+@media screen and (max-width: 768px) {
+    .login-port {
+        min-width: 8vw;
+        height: 5.3vw;
+    }
+
     .aims-container {
-        /* top: 2050px; */
-        /* top: 165vh; */
         margin: 50vh 0;
         width: 100%;
     }
@@ -138,9 +152,15 @@ body {
         font-size: 3vw;
     }
 
+    .login-container {
+        max-height: 50px;
+    }
+
     .login-port {
-        margin: -6vw 87vw;
-        font-size: 4vw;
+        width: 11vw;
+        margin: 0 87vw;
+        border-radius: 5px;
+        font-size: 3vw;
     }
 
     .img-container {
@@ -184,6 +204,17 @@ body {
         top: 16vw;
         font-size: 6vw;
     }
+}
+
+@media screen and (max-width: 425px)   {
+    .login-port {
+        padding: 2px;
+        margin: 0.5em 83.6vw;
+        width: 12.5vw;
+        height: 4vh;
+    }
+
+    
    
 }
 
@@ -262,7 +293,7 @@ body {
     color: #0000cd;
 }  
 
-@media screen and (max-width: 523px) {
+@media screen and (max-width: 425px) {
     body{
         width: 100%;
         height: 100%;
@@ -290,7 +321,7 @@ body {
 
   }
 
-  @media screen and (min-width: 524px) and (max-width: 747px) { /*768*/
+  @media screen and (min-width: 425px) and (max-width: 768px) {
     body {
         width: 100%;
         height: 100%;

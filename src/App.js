@@ -1,6 +1,5 @@
 // import {useState} from 'react'
 import {Routes, Route} from 'react-router-dom'
-import Nav from './components/Nav'
 import Landing from './components/Landing'
 import Enrollment from './components/Enrollment'
 import Login from './components/Login'
@@ -18,15 +17,11 @@ function App() {
           <Route path = '/profile' element = {<Profile />} />
         </Routes>
       ) : (
-        <>
-        <Nav />
-          <Routes>
+        <Routes>
           <Route path = '/' element = {<Landing />} />
           <Route path = '/login' element = {<Login />} />
           <Route path = '/enrollment' element = {<Enrollment />} />
         </Routes>
-        </>
-        
       )}
     </div>
 )}

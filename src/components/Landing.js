@@ -28,9 +28,11 @@ function Landing() {
         {/* <Link to = '/login' target = '_blank'>
             <button className = 'login-port'>Login</button>
         </Link> */}
-        <a className = 'login-port' href = '/login' target = ' blank'>
-            CSIMS
-        </a> 
+        <div>
+            <a className = 'login-port' href = '/login' target = ' blank'>
+            Sign in
+            </a>
+        </div>
         
         <div className = 'bg-light'>
             <div className = 'bg-dark'>
