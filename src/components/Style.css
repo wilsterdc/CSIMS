@@ -16,11 +16,9 @@ body {
     position: relative;
     display: flex;
     flex-direction: row;
-    padding: 50px;
+    padding: 50px 50px;
     margin: 30px 20px;
-    /* height: 100%; */
-    gap: 50px;
-    border: 2px solid #1a1818;
+    gap: 60px;
 }
 
 .login-container {
@@ -74,6 +72,7 @@ body {
 .login-input {
     width: 25vw;
     min-width: 16em;
+    max-width: 20em;
     font-size: 18px;
     padding: 5px;
     border: 1px solid #a9a9a9;
@@ -82,9 +81,8 @@ body {
 }
 
 
-.login-input:focus {
-    border-color: #0000cd;
-    border: 3px solid #0000cd;
+.login-input:focus{
+    outline: 1px solid #0000cd;
 }
 
 .login-btn {
@@ -96,7 +94,7 @@ body {
     background: #0000cd;
     border: none;
     cursor: pointer;
-    border-radius: 1em;
+    border-radius: 10px;
     text-align: center;
     font-family: inherit;
     font-size: 18px;
@@ -132,17 +130,17 @@ body {
 .create-csims {
     display: flex;
     flex-direction: column;
-    /* background: #fff000; */
+    background: #fff000;
     border-radius: 1em;
     padding: 10px;
-    /* border: 2px solid #0000cd; */
+    width: 55vw;
+    box-shadow: 0 0 10px 3px rgba(26, 25, 25, 0.7);
 }
 
 .create-csims h4 {
     color: #1a1818;
     font-size: 20pt;
     text-align: center;
-    /* background-color: #0000cd; */
     border-radius: 1em;
 }
 
@@ -156,7 +154,15 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    background-color: #fff;
+}
+
+.instance {
+    height: 28px;
+    border: 1px solid #1a1818;
+    margin-left: 8px;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    border: 1px solid #1a1818;
 }
 
 .create-csims-form label {
@@ -164,52 +170,125 @@ body {
     font-size: 12pt;
 }
 
-.name {
+.name-container {
     display: flex;
     flex-direction: row;
+    gap: 8px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.name input {
+    height: 28px;
+    padding: 5px;
+    width: 16vw;
+    min-width: 175px;
+    height: 28px;
+    font-size: 12pt;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    border: 1px solid #1a1818;
 }
 
 .gd-container {
     display: flex;
     flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.gender {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.birthday {
+    font-size: 12pt;
+    margin-left: 5px;
+    border-radius: 7px;
+    border: 1px solid #1a1818;
 }
 
 .ec-container {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+}
+
+.ec {
+    display: flex;
+    flex-direction: column;
+}
+
+.ec input {
+    height: 28px;
+    padding: 5px;
+    width: 16vw;
+    min-width: 175px;
+    font-size: 12pt;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    border: 1px solid #1a1818;
+}
+
+.instance:focus, .name input:focus,
+ .birthday:focus, .ec input:focus {
+    outline: 1px solid #0000cd;
 }
 
 .save {
-    background-color: transparent;
+    display: inline;
+    color: white;
+    width: 90px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    background: #0000cd;
     border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 18px; 
+}
+
+@media screen and (max-width: 1125px) {
+    .name-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gd-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ec-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 425px) {
     .main-container {
-        margin: 0;
+        margin: 40px;
         padding: 25px;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
-    .cover {
-        margin: 50px auto;
-        float: none;
-        width: 80%;
-        height: auto;
-        position: center; 
-        display: flex;
-        flex-direction: column;
-      
+    .login-container {
+        min-width: 11.5em;
     }
 
-    .login-input {
-        width: 85%;
-    }
-
-    .pass-btn {
-        right: 15%;
-        top: 154px;
+    .create-csims {
+        width: 23.5em;
     }
 
   }
@@ -221,24 +300,12 @@ body {
         align-items: center;
     }
 
-    .cover {
-        margin: 40px auto;
-        float: none;
-        width: 80%;
-        height: auto;
-        position: center; 
-        /* display: flex;
-        flex-direction: column; */
-      
+    .login-container {
+        min-width: 11.5em;
     }
 
-    .login-input {
-        width: 85%;
-    }
-
-    .pass-btn {
-        right: 12%;
-        top: 154px;
+    .create-csims {
+        width: 23.5em;
     }
 
   }

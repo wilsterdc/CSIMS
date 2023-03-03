@@ -149,7 +149,7 @@ const Login = () => {
                 <form className = 'create-csims-form' onSubmit = {handleSaveCancel}>
                     <div>
                         <label>
-                            School Preffered Program to Study
+                            School Preffered Program to Study:
                         </label>
                         <select className = 'instance'>
                             <option>{dropdown}</option>
@@ -164,49 +164,54 @@ const Login = () => {
                             <option value = '4th Year College'>Incoming 4th Year College</option>
                         </select>
                     </div>
-                    <div className = 'name'>
-                        <label>
-                            Last Name:
-                            <input required className = 'lastName' placeholder = 'Last name'></input>
-                        </label>
-                        
-                        <label>
-                            First Name:
-                            <input required className = 'firsName' placeholder = 'First name'></input>
-                        </label>
-                        
-                        <label>
-                            Middle Name:
-                            <input required className = 'middleName' placeholder = 'Middle name'></input>
-                        </label>
-                        
+                    <div className = 'name-container'>
+                        <div className = 'name'>
+                             <label>
+                                Last Name:
+                            </label>
+                            <input required placeholder = 'Last name'></input>
+                        </div>
+                        <div className = 'name'>
+                            <label>
+                                First Name:
+                            </label>
+                            <input required placeholder = 'First name'></input>
+                        </div>
+                        <div className = 'name'>
+                            <label>
+                                Middle Name:
+                            </label> 
+                            <input required placeholder = 'Middle name'></input>
+                        </div>
                     </div>
                     <div className = 'gd-container'>
-                        <label>
-                            Gender:
+                        <div className = 'gender'>
                             <label>
-                                <input 
-                                required
-                                type = 'radio' 
-                                className = 'male' 
-                                value = 'male'
-                                checked = {selected === 'male'}
-                                onChange = {handleRadioSelect}
-                                disable = {selected === 'female'}
-                                />Male
+                                Gender:
                             </label>
                             <label>
                                 <input 
-                                required
-                                type = 'radio' 
-                                className = 'female' 
-                                value = 'female'
-                                checked = {selected === 'female'}
-                                onChange = {handleRadioSelect}
-                                disable = {selected === 'male'}
-                                />Female
+                                    required
+                                    type = 'radio' 
+                                    className = 'male' 
+                                    value = 'male'
+                                    checked = {selected === 'male'}
+                                    onChange = {handleRadioSelect}
+                                    disable = {selected === 'female'}
+                                    />Male
                             </label>
-                        </label>
+                            <label>
+                                <input 
+                                    required
+                                    type = 'radio' 
+                                    className = 'female' 
+                                    value = 'female'
+                                    checked = {selected === 'female'}
+                                    onChange = {handleRadioSelect}
+                                    disable = {selected === 'male'}
+                                    />Female
+                            </label>
+                        </div>
                         <label>
                             Date of Birth:
                             <input 
@@ -220,14 +225,18 @@ const Login = () => {
                         </label>
                     </div>
                     <div className = 'ec-container'>
-                        <label>
-                            Email:
-                            <input required type = 'email' className = 'email' placeholder = 'Email address'></input>
-                        </label>
-                        <label>
-                            Contact Number:
-                            <input required type = 'number' className = 'contact' placeholder = 'Contact number'></input>
-                        </label>
+                        <div className = 'ec'>
+                            <label>
+                                Email:
+                            </label>
+                            <input required type = 'email' placeholder = 'Email address'></input>
+                        </div>
+                        <div className = 'ec'>
+                            <label>
+                                Contact Number:
+                            </label>
+                            <input required type = 'number' placeholder = 'Contact number'></input>
+                        </div>
                     </div>
                     <div>
                         <button type = 'submit' className = 'save' value = 'save'>Save</button>
