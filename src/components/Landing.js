@@ -26,7 +26,7 @@ function Landing() {
 
   return (
     <div>
-        <div className = 'login-container'>
+        <div className = 'signin-container'>
             {/* <Link to = '/login' target = '_blank'>
                 <button className = 'login-port'>Login</button>
             </Link> */}

@@ -43,7 +43,7 @@
     top: 0;
     background-color: #fff000;
     width: 63.5vw;
-    height: 100.5vh;
+    height: 100vh;
     overflow: hidden;
     clip-path: polygon(0% 0%,71% 0%,90% 30%,60% 100%,0% 100%);
 }
@@ -52,7 +52,7 @@
     position: absolute;
     background-color: #0000cd;
     width: 62.5vw;
-    height: 100.5vh;
+    height: 100vh;
     overflow: hidden;
     clip-path: polygon(0% 0%,65% 0%,90% 40%,60% 120%,0% 100%);
 }
@@ -65,7 +65,7 @@
     object-fit: cover;
 }  
 
-.login-container {
+.signin-container {
     display: flex;
     flex-direction: column;
     height: 6vh;
@@ -114,20 +114,20 @@
 
     .interchng-text {
         position: absolute;
-        top: 10vh;
+        top: 7vh;
         margin-left: 2vw;
         width: 96vw;
     }
 
     .interchng-text img {
-        width: 40vw;
+        width: 30vw;
         min-width: 100px;
-        margin: 0 -19vw;
+        margin: 0 -14vw;
     }
 
     .interchng-text p {
-        top: 16vw;
-        font-size: 6vw;
+        top: 7vw;
+        font-size: 5.5vw;
         text-shadow: 1px 1px 1px #ffff;
     }
 }

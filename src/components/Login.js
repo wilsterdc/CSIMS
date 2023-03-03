@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import './Style.css'
+import cmilogo from './Images/cmi.png'
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -8,10 +9,29 @@ const Login = () => {
     const [error, setError] = useState('');
     const [successful, setSuccessful] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [selected, setSelected] = useState('');
+    const [birthday, setBirthday] = useState('');
+    const dropdown = 'Please select'
+
+    const handleSaveCancel = (e) => {
+        e.preventDefault();
+        if (window.confirm('Please make sure all fields are correct and filled with right information. After submitting the form, wait for an e-mail with your username and password.')) {
+            alert('Form saved');
+            window.location.href = '/'
+        }
+    }
 
     const toggleShowPassword = () => {
         setShowPassword(!showPassword);
     };
+
+    const handleRadioSelect = (e) => {
+        setSelected(e.target.value);
+    }
+
+    const handleBirthday = (e) => {
+        setBirthday(e.target.value);
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -65,47 +85,144 @@ const Login = () => {
     };
 
   return (
-    <div>
-        <div className = 'cover'>
-            <h4>College of Mary Immaculate</h4>
-            <form onSubmit = {handleSubmit}>
-                <div>
-                    <input 
-                        className = 'login-input' 
-                        type = 'text' 
-                        placeholder = 'Username'
-                        value = {username}
-                        onChange = {(e) => setUsername(e.target.value)} />
+    <div className = 'main-container'>
+        <div className = 'login-container'>
+            <div className = 'csims-container'>
+                <div className = 'cmi-logo'>
+                    <img className = 'cmi-img' src = {cmilogo} alt = 'CMI LOGO' />
                 </div>
-                <div>
-                    <input 
-                        className = 'login-input' 
-                        type = {showPassword ? 'text' : 'password'} 
-                        placeholder = 'Password'
-                        value = {password}
-                        onChange = {(e) => setPassword(e.target.value)} />
-                    <button 
-                        className = 'pass-btn'
-                        type = 'button'
-                        onClick = {toggleShowPassword}>{showPassword ? <FaEyeSlash /> : <FaEye />}</button>
+                <div className = 'csims'>
+                    <h4>Student Information Management System</h4>
                 </div>
-                <div>
-                    {successful ? (<p id = 'success'>{successful}</p>) : 
-                    error && <p id = 'failed'>{error}</p>}
-                </div>
-                <div>
-                    <p className = 'reset'>
-                        Forgot password? <br />
-                        Please contact the Office of the Registrar 
-                        through the following contact number: <strong><em>(044) 769 2021</em></strong> or
-                         through email; <a href = "mailto:inquiries@collegeofmaryimmaculate.edu.ph" target = 'blank'>
-                            inquiries@collegeofmaryimmaculate.edu.ph</a>
-                    </p>
-                </div>
-                <div>
-                    <button type = 'submit' className = 'login-btn'>Login</button>
-                </div>
-            </form>
+            </div>
+            <div className = 'form-container'>
+                <form onSubmit = {handleSubmit}>
+                    <div>
+                        <input 
+                            className = 'login-input' 
+                            type = 'text' 
+                            placeholder = 'Username'
+                            value = {username}
+                            onChange = {(e) => setUsername(e.target.value)} />
+                    </div>
+                    <div>
+                        <input 
+                            className = 'login-input' 
+                            type = {showPassword ? 'text' : 'password'} 
+                            placeholder = 'Password'
+                            value = {password}
+                            onChange = {(e) => setPassword(e.target.value)} />
+                        <button 
+                            className = 'pass-btn'
+                            type = 'button'
+                            onClick = {toggleShowPassword}>{showPassword ? <FaEyeSlash /> : <FaEye />}</button>
+                    </div>
+                    <div>
+                        {successful ? (<p id = 'success'>{successful}</p>) : 
+                        error && <p id = 'failed'>{error}</p>}
+                    </div>
+                    <div>
+                        <p className = 'reset'>
+                            Forgot password? <br />
+                            Please contact the Office of the Registrar 
+                            through the following contact number: <strong><em>(044) 769 2021</em></strong> or
+                            through email; <a href = "mailto:inquiries@collegeofmaryimmaculate.edu.ph" target = 'blank'>
+                                inquiries@collegeofmaryimmaculate.edu.ph</a>
+                        </p>
+                    </div>
+                    <div>
+                        <button type = 'submit' className = 'login-btn'>Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {/* -------------------------------------------------------------------------------------------------------------------- */}
+        <div className = 'create-csims'>
+            <div>
+                <h4>Create CSIMS Account</h4>
+            </div>
+            <div>
+                <p><strong>Note: Creation of account is for Incoming students and Transferee only.</strong></p>
+                <p>Please fill up this Registration Form completely. Enter NOT APPLICABLE when necessary.</p>
+            </div>
+            <div>
+                <form onSubmit = {handleSaveCancel}>
+                    <div>
+                        <label>
+                            School Preffered Program to Study
+                        </label>
+                        <select className = 'instance'>
+                            <option defaultValue={dropdown}></option>
+                            <option value = 'Playschool'>Incoming Playschool</option>
+                            <option value = 'Kinder 1'>Incoming Kinder 1</option>
+                            <option value = 'Kinder 2'>Incoming Kinder 2</option>
+                            <option value = 'Grade 11'>Incoming Grade 11</option>
+                            <option value = 'Grade 12'>Incoming Grade 12</option>
+                            <option value = '1st Year'>Incoming 1st Year College</option>
+                            <option value = '2nd Year'>Incoming 2nd Year College</option>
+                            <option value = '3rd Year College'>Incoming 3rd Year College</option>
+                            <option value = '4th Year College'>Incoming 4th Year College</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>
+                            Last Name
+                        </label>
+                        <input required className = 'lastName' placeholder = 'Last name'></input>
+                        <label>
+                            First Name
+                        </label>
+                        <input required className = 'firsName' placeholder = 'First name'></input>
+                        <label>
+                            Middle Name
+                        </label>
+                        <input required className = 'middleName' placeholder = 'Middle name'></input>
+                    </div>
+                    <div>
+                        <label>Gender</label>
+                        <label>
+                            <input 
+                            required
+                            type = 'radio' 
+                            className = 'male' 
+                            value = 'male'
+                            checked = {selected === 'male'}
+                            onChange = {handleRadioSelect}
+                            disable = {selected === 'female'}
+                            />Male
+                        </label>
+                        <label>
+                            <input 
+                            required
+                            type = 'radio' 
+                            className = 'female' 
+                            value = 'female'
+                            checked = {selected === 'female'}
+                            onChange = {handleRadioSelect}
+                            disable = {selected === 'male'}
+                            />Female
+                        </label>
+                        <label>Date of Birth</label>
+                        <input 
+                        required
+                        type = 'date' 
+                        className = 'birthday' 
+                        value = {birthday}
+                        onChange = {handleBirthday}
+                        max = {new Date().toISOString().split('T')[0]}
+                        ></input>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input required type = 'email' className = 'email' placeholder = 'Email address'></input>
+                        <label>Contact Number</label>
+                        <input required type = 'number' className = 'contact' placeholder = 'Contact number'></input>
+                    </div>
+                    <div>
+                        <button type = 'submit' className = 'save' value = 'save'>Save</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
   )
