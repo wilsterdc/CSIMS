@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import dedication from './dedication.json'
 import cmibuildingSrc from './Images/cmibuilding.jpg'
 import cmiLogo from './Images/cmi.png'
+import './Landing.css'
 
 function Landing() {
     const [texts, setTexts] = useState([]);
@@ -25,10 +26,10 @@ function Landing() {
 
   return (
     <div>
-        {/* <Link to = '/login' target = '_blank'>
-            <button className = 'login-port'>Login</button>
-        </Link> */}
-        <div>
+        <div className = 'login-container'>
+            {/* <Link to = '/login' target = '_blank'>
+                <button className = 'login-port'>Login</button>
+            </Link> */}
             <a className = 'login-port' href = '/login' target = ' blank'>
             Sign in
             </a>
@@ -41,11 +42,13 @@ function Landing() {
                 </div>
             </div>
         </div>
-        <div className = 'interchng-text'>
-            <img src = {cmiLogo} alt = "CMI Logo" />
-            <p>{texts[currentTextIndex]?.text}</p>
+        <div >
+            <div className = 'interchng-text'>
+                <img src = {cmiLogo} alt = "CMI Logo" />
+                <p>{texts[currentTextIndex]?.text}</p>
+            </div>     
         </div>
-        <div className = 'aims-container'>
+        {/* <div className = 'aims-container'>
             <p>
                 The COLLEGE OF MARY IMMACULATE aims to provide Senior High School and Tertiary Education Programs,
                 as well as Technical and Vocational Courses, with an integration of Values Formation and a strong Job Readiness Program. 
@@ -70,7 +73,7 @@ function Landing() {
                     and eventually contribute to the larger community and national development.
                 </li>
             </ul>
-        </div>
+        </div> */}
     </div>
   )
 }

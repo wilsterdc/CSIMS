@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
+
+.interchng-text {
+    position: relative;
+    float: right;
+    color: #1a1818;
+    margin: -2vh 0.8vw;
+    padding: 0 0.5em;
+    width: 40vw;
+    height: 520px;
+    text-align: center;
+}
+
+.interchng-text p {
+    position: relative;
+    font-family: 'Playfair Display SC';
+    margin: 19vw 2%;
+    font-weight: 700;
+    font-size: 2.5vw;
+    text-shadow: 1px 1px 1px #ffff;
+    color: #1a1818;
+}
+
+.interchng-text img {
+    position: absolute;
+    background-color: transparent;
+    margin: 0.5em -10vw;
+    width: 20vw;
+    height: auto;
+}
+
+.img-container {
+    position: relative;
+    width: 58.5vw;
+    height: 100%;
+    overflow: hidden;
+    clip-path: polygon(0% 0%,70% 0%,90% 30%,57% 100%,0% 120%);
+}
+
+.bg-light {
+    position: absolute;
+    top: 0;
+    background-color: #fff000;
+    width: 63.5vw;
+    height: 100.5vh;
+    overflow: hidden;
+    clip-path: polygon(0% 0%,71% 0%,90% 30%,60% 100%,0% 100%);
+}
+
+.bg-dark {
+    position: absolute;
+    background-color: #0000cd;
+    width: 62.5vw;
+    height: 100.5vh;
+    overflow: hidden;
+    clip-path: polygon(0% 0%,65% 0%,90% 40%,60% 120%,0% 100%);
+}
+
+.img-container img {
+    left: -0.4em;
+    position: absolute;
+    width: 53vw;
+    height: 120vh;
+    object-fit: cover;
+}  
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    height: 6vh;
+    min-height: 2em;
+    align-items: end;
+    margin-top: 1vw;
+    margin-right: 1vw;
+}
+
+.login-port {
+    background-color: #fff000;
+    padding: 2px 4px;
+    border: 1px solid #0000cd;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .img-container {
+        width: 94%;
+        height: 100%;
+        clip-path: polygon(0% 0%,70% 0%,95% 30%,60% 100%,0% 100%);
+    }
+
+    .bg-light {
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0% 0%,77% 0%,100% 30%,68% 100%,0% 100%);
+    }
+
+    .bg-dark {
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0% 0%,65% 0%,96% 40%,70% 100%,0% 120%);
+    }
+
+    .img-container img {
+        width: 100%;
+        height: 120%;
+        filter: blur(3px)
+    }
+
+    .interchng-text {
+        position: absolute;
+        top: 10vh;
+        margin-left: 2vw;
+        width: 96vw;
+    }
+
+    .interchng-text img {
+        width: 40vw;
+        min-width: 100px;
+        margin: 0 -19vw;
+    }
+
+    .interchng-text p {
+        top: 16vw;
+        font-size: 6vw;
+        text-shadow: 1px 1px 1px #ffff;
+    }
+}
+
+@media screen and (max-width: 425px)   {
+    .login-port {
+        font-size: 14px;
+    }
+}
