@@ -33,7 +33,7 @@ body {
     height: 65vh;
     min-height: 16em;
     max-height: 17em;
-    box-shadow: 0 0 10px 3px rgb(105, 105, 105, 0.5);
+    box-shadow: 0 0 10px 3px rgba(26, 25, 25, 0.7);
     border-radius: 1em;
     padding: 10px;
     text-align: center;
@@ -76,12 +76,14 @@ body {
     min-width: 16em;
     font-size: 18px;
     padding: 5px;
+    border: 1px solid #a9a9a9;
     border-radius: 0.5em;
     background-color: transparent;
 }
 
 
 .login-input:focus {
+    border-color: #0000cd;
     border: 3px solid #0000cd;
 }
 
@@ -106,10 +108,8 @@ body {
 
 .pass-btn {
     position: absolute;
-    right: 70px;
-    top: 154px;
-    transform: translateX(10%);
-    background-color: transparent;
+    margin: 19px -25px;
+    background: transparent;
     border: none;
     cursor: pointer;
 }
@@ -122,7 +122,6 @@ body {
 #failed {
     font-size: 14px;
     color: #ff0000;
-    /* margin-top: 5px; */
 }
 
 #success {
@@ -133,10 +132,57 @@ body {
 .create-csims {
     display: flex;
     flex-direction: column;
-    border: 2px solid #0000cd;
+    /* background: #fff000; */
+    border-radius: 1em;
+    padding: 10px;
+    /* border: 2px solid #0000cd; */
 }
 
+.create-csims h4 {
+    color: #1a1818;
+    font-size: 20pt;
+    text-align: center;
+    /* background-color: #0000cd; */
+    border-radius: 1em;
+}
 
+.create-csims p {
+    color: #1a1818;
+    text-align: center;
+    font-size: 10pt;
+}
+
+.create-csims-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.create-csims-form label {
+    color: #1a1818;
+    font-size: 12pt;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+}
+
+.gd-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.ec-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.save {
+    background-color: transparent;
+    border: none;
+}
 
 @media screen and (max-width: 425px) {
     .main-container {
